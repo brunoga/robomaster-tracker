@@ -1,5 +1,7 @@
 github.com/brunoga/robomaster v0.0.5 h1:TFKZvusBSZKxtymFPulFel4V0KJHu8en2goqCG2d2pw=
 github.com/brunoga/robomaster v0.0.5/go.mod h1:Fy74p8EAdDvYIe20GEdU1tBG0TbwHTKVTPX2mSlACTQ=
+github.com/brunoga/robomaster v0.0.6 h1:LggJsZ0WEbX+FYj30g6PIPw03Gl1NQl7koxZ/DlM1Dw=
+github.com/brunoga/robomaster v0.0.6/go.mod h1:Fy74p8EAdDvYIe20GEdU1tBG0TbwHTKVTPX2mSlACTQ=
 github.com/brunoga/timedsignalwaiter v1.0.0 h1:qrOJVQHkEs3THyiA6VJq9x5gk332Y+P1so5oNKXKyqY=
 github.com/brunoga/timedsignalwaiter v1.0.0/go.mod h1:BdJJP3W2pKIagoTPlFpoReg5sxZQ2rDa0ZspHWoX7Sw=
 github.com/davecgh/go-spew v1.1.1 h1:vj9j/u1bqnvCEfJOwUhtlOARqs3+rkHYY13jYWTU97c=

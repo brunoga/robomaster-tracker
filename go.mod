@@ -3,7 +3,7 @@ module github.com/brunoga/robomaster-tracker
 go 1.22.3
 
 require (
-	github.com/brunoga/robomaster v0.0.5
+	github.com/brunoga/robomaster v0.0.6
 	github.com/faiface/mainthread v0.0.0-20171120011319-8b78f0a41ae3
 	gocv.io/x/gocv v0.36.1
 )
