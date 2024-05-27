@@ -12,8 +12,7 @@ import (
 	"github.com/brunoga/robomaster"
 	"github.com/brunoga/robomaster-tracker/mode"
 	"github.com/brunoga/robomaster/module/camera"
-	"github.com/brunoga/robomaster/module/chassis"
-	"github.com/brunoga/robomaster/module/chassis/controller"
+	"github.com/brunoga/robomaster/module/controller"
 	"github.com/brunoga/robomaster/module/robot"
 	"github.com/brunoga/robomaster/support/pid"
 	"github.com/faiface/mainthread"
@@ -29,12 +28,12 @@ var (
 )
 
 type exampleVideoHandler struct {
-	window        *gocv.Window
-	tracker       *mode.ColorObject
-	chassisModule *chassis.Chassis
-	pidPitch      pid.Controller
-	pidYaw        pid.Controller
-	quitChan      chan struct{}
+	window           *gocv.Window
+	tracker          *mode.ColorObject
+	controllerModule *controller.Controller
+	pidPitch         pid.Controller
+	pidYaw           pid.Controller
+	quitChan         chan struct{}
 }
 
 func parseHSVValues(hsvString string) (float64, float64, float64, error) {
@@ -62,7 +61,7 @@ func parseHSVValues(hsvString string) (float64, float64, float64, error) {
 }
 
 func newExampleVideoHandler(
-	chassisModule *chassis.Chassis) (*exampleVideoHandler, error) {
+	controllerModule *controller.Controller) (*exampleVideoHandler, error) {
 
 	var window *gocv.Window
 	mainthread.Call(func() {
@@ -84,7 +83,7 @@ func newExampleVideoHandler(
 	return &exampleVideoHandler{
 		window,
 		mode.NewColorObject(hl, sl, vl, hu, su, vu, 10),
-		chassisModule,
+		controllerModule,
 
 		// TODO(bga): Tune these values.
 		pid.NewPIDController(0.7, 0.0, 0.0, -1, 1),
@@ -146,7 +145,7 @@ func (e *exampleVideoHandler) HandleFrame(frame *camera.RGB) {
 				X: outputX,
 				Y: -outputY,
 			}
-			err = e.chassisModule.Move(nil, &gimbalStickPosition, controller.ModeSDK)
+			err = e.controllerModule.Move(nil, &gimbalStickPosition, controller.ModeSDK)
 			if err != nil {
 				fmt.Println(err)
 			}
@@ -179,10 +178,10 @@ func run() {
 	defer client.Stop()
 
 	// Obtain references to the modules we are interested in.
-	chassisModule := client.Chassis()
+	controllerModule := client.Controller()
 	cameraModule := client.Camera()
 
-	err = chassisModule.SetMode(chassis.ModeFPV)
+	err = controllerModule.SetMode(controller.ModeFPV)
 	if err != nil {
 		panic(err)
 	}
@@ -192,7 +191,7 @@ func run() {
 		panic(err)
 	}
 
-	videoHandler, err := newExampleVideoHandler(chassisModule)
+	videoHandler, err := newExampleVideoHandler(controllerModule)
 	if err != nil {
 		panic(err)
 	}
