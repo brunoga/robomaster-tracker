@@ -1,11 +1,15 @@
 github.com/brunoga/groupfilterhandler v0.0.0-20240529152547-549eb8e3c392 h1:CUnCn5Q+heeKFZhCzjtrL859ZbbDoPUl6T2fPY/ZmNc=
 github.com/brunoga/groupfilterhandler v0.0.0-20240529152547-549eb8e3c392/go.mod h1:RqXgYZreDlnAe4UifRSYxSA94W+TbWTAwU6SfN9UeRo=
+github.com/brunoga/groupfilterhandler v0.0.1 h1:B6c9m+q8F6xwtpoOtRFVbrFhMhMgMIMeASrEjm4RwK8=
+github.com/brunoga/groupfilterhandler v0.0.1/go.mod h1:RqXgYZreDlnAe4UifRSYxSA94W+TbWTAwU6SfN9UeRo=
 github.com/brunoga/robomaster v0.0.5 h1:TFKZvusBSZKxtymFPulFel4V0KJHu8en2goqCG2d2pw=
 github.com/brunoga/robomaster v0.0.5/go.mod h1:Fy74p8EAdDvYIe20GEdU1tBG0TbwHTKVTPX2mSlACTQ=
 github.com/brunoga/robomaster v0.0.6 h1:LggJsZ0WEbX+FYj30g6PIPw03Gl1NQl7koxZ/DlM1Dw=
 github.com/brunoga/robomaster v0.0.6/go.mod h1:Fy74p8EAdDvYIe20GEdU1tBG0TbwHTKVTPX2mSlACTQ=
 github.com/brunoga/robomaster v0.0.7 h1:ijrx4a2psl2UEDYcSKTiBgWuichvJ5Za0rEWVwRqETY=
 github.com/brunoga/robomaster v0.0.7/go.mod h1:4lqHW34sbBtMzhxS/tGN5j8y7z/9AmfMB0mlkYrqvpo=
+github.com/brunoga/robomaster v0.0.8 h1:e5a2sYg5bVP/PI3QEWlgHZqooly8JPgfabTck6bPbnE=
+github.com/brunoga/robomaster v0.0.8/go.mod h1:fbwlO2QwuMyle6iCgq3QSX/XP3fEBAxjTqdu86eVWXo=
 github.com/brunoga/timedsignalwaiter v1.0.0 h1:qrOJVQHkEs3THyiA6VJq9x5gk332Y+P1so5oNKXKyqY=
 github.com/brunoga/timedsignalwaiter v1.0.0/go.mod h1:BdJJP3W2pKIagoTPlFpoReg5sxZQ2rDa0ZspHWoX7Sw=
 github.com/davecgh/go-spew v1.1.1 h1:vj9j/u1bqnvCEfJOwUhtlOARqs3+rkHYY13jYWTU97c=
